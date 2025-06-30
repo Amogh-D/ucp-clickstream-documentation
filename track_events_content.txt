@@ -1,0 +1,1580 @@
+Track Events - Phase 1 Integration
+Ecommerce Events
+These events are generic activity events - clickstream and orderstream and not dependent on medium
+
+PRODUCT CLICKED
+Triggered when a user clicks on a product in PLP, Home Page or any other CTA where navigation to PDP happens.
+Type- Core Event
+
+{
+
+}
+
+"type": "track",
+"event": "Product Clicked",
+"properties": {
+"click_source": "Category List"
+"product_id": "52efg-7f",
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 1,
+"price": 1299.00,
+"value": 1299.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/4103
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa
+"generic_article_id": "12345678",
+"EAN": "4006381333931",
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+}
+
+PRODUCT VIEWED
+Triggered when a user views a product on a page, screen or preview mode
+Type- Core Event
+
+{
+
+}
+
+"type": "track",
+"event": "Product Viewed",
+"properties": {
+"product_id": "52efg-7f",
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 1,
+"price": 1299.00,
+"value": 1299.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/4103
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa
+"generic_article_id": "12345678",
+"EAN": "4006381333931",
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+}
+
+PRODUCT ADDED
+Triggered when a user adds a product to their cart
+Type- Core Event
+
+{
+
+}
+
+"type": "track",
+"event": "Product Added",
+"properties": {
+"cart_id": "3j2h3j4gh-3472dbsjk",
+"position": 1,
+"product_id": "52efg-7f",
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 2,
+"price": 1299.00,
+"value": 2598.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/4103
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa
+"generic_article_id": 12345678,
+"EAN": 4006381333931,
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+}
+
+PRODUCT REMOVED
+Triggered when a user removes an item from the cart
+Type- Core Event
+
+{
+
+"type": "track",
+"event": "Product Removed",
+"properties": {
+"cart_id": "3j2h3j4gh-3472dbsjk",
+"position": 1,
+"product_id": "52efg-7f",
+
+}
+
+}
+
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 1,
+"price": 1299.00,
+"value": 1299.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/4103
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa
+"generic_article_id": 12345678,
+"EAN": 4006381333931,
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+
+ORDER COMPLETED
+This event is triggered when an order is completed by the user.
+Type- Core Event
+
+{
+
+"type": "track",
+"event": "Order Completed",
+"properties": {
+"order_id": "3j2h3j4gh-2323b2b3",
+"cart_id": "3j2h3j4gh-3472dbsjk",
+"cart_total": 3897.00,
+"items": 3,
+"other_charges": 2.00,
+"discount": 50.00,
+"order_total": 3849.00,
+"order_payment_breakup":[
+{
+"payment_amount": 3800.0,
+
+},
+{
+
+"mop": "UPI"
+"payment_amount": 49.0,
+"mop": "Sodexo"
+
+}
+],
+"products": [{
+"position": 1,
+"product_id": "52efg-7f",
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 1,
+"price": 1299.00,
+"value": 1299.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/6
+"generic_article_id": 12345678,
+"EAN": 4006381333931,
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+},
+{
+"position": 2,
+"product_id": "52efg-7l",
+"sku": "SD-henleyyellowL",
+"product_name": "SuperDry Henley Full - Yellow",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+
+}
+
+}
+
+]
+
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 2,
+"price": 1299.00,
+"value": 2598.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/6
+"generic_article_id": 12345679,
+"EAN": 4006381333932,
+"variant_article_number": 12345678-011,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "yellow",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+}
+
+ORDER CANCELLED
+This event is triggered when an order is cancelled by the user
+Type- Core Event
+
+{
+
+"type": "track",
+"event": "Order Cancelled",
+"properties": {
+"order_id": "3j2h3j4gh-2323b2b3",
+"cart_id": "3j2h3j4gh-3472dbsjk",
+"cart_total": 3897.00,
+"items": 3,
+"other_charges": 2.00,
+"discount": 50.00,
+"order_total": 3849.00,
+"order_payment_breakup":[
+{
+"payment_amount": 3800.0,
+"mop": "UPI"
+},
+{
+"payment_amount": 49.0,
+"mop": "Sodexo"
+}
+],
+"cancellation_reason": "Defective Product",
+
+"cancelled_amount" : 3897.00,
+"products": [{
+"position": 1,
+"product_id": "52efg-7f",
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 1,
+"price": 1299.00,
+"value": 1299.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/6
+"generic_article_id": 12345678,
+"EAN": 4006381333931,
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+},
+{
+"position": 2,
+"product_id": "52efg-7l",
+"sku": "SD-henleyyellowL",
+"product_name": "SuperDry Henley Full - Yellow",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 2,
+"price": 1299.00,
+
+}
+
+}
+
+]
+
+"value": 2598.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/6
+"generic_article_id": 12345679,
+"EAN": 4006381333932,
+"variant_article_number": 12345678-011,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "yellow",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+}
+
+ORDER REFUNDED
+This event is triggered when an order that has been cancelled by the user gets a refund.
+Type- Core Event
+
+{
+
+"type": "track",
+"event": "Order Refunded",
+"properties": {
+"order_id": "3j2h3j4gh-2323b2b3",
+"cart_id": "3j2h3j4gh-3472dbsjk",
+"cart_total": 3897.00,
+"items": 3,
+"other_charges": 2.00,
+"discount": 50.00,
+"order_total": 3849.00,
+"order_payment_breakup":[
+{
+"payment_amount": 3800.0,
+"mop": "UPI"
+},
+{
+"payment_amount": 49.0,
+"mop": "Sodexo"
+}
+],
+"cancellation_reason": "Defective Product",
+"refund_amount": 3847.00,
+"refund_payment_breakup": [
+{
+"payment_amount": 3800.0,
+"mop": "UPI"
+},
+
+{
+
+"payment_amount": 49.0,
+"mop": "Sodexo"
+
+}
+],
+"products": [{
+"position": 1,
+"product_id": "52efg-7f",
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 1,
+"price": 1299.00,
+"value": 1299.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/6
+"generic_article_id": 12345678,
+"EAN": 4006381333931,
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+},
+{
+"position": 2,
+"product_id": "52efg-7l",
+"sku": "SD-henleyyellowL",
+"product_name": "SuperDry Henley Full - Yellow",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+
+}
+
+}
+
+]
+
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 2,
+"price": 1299.00,
+"value": 2598.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/6
+"generic_article_id": 12345679,
+"EAN": 4006381333932,
+"variant_article_number": 12345678-011,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "yellow",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+}
+
+CHECKOUT STARTED
+Triggered when a user starts the checkout process for the items in their cart. This event can be fired when a user clicks on the
+“Proceed to buy” or any other variation of the option.
+Type- Core Event
+
+{
+
+"type": "track",
+"event": "Checkout Started",
+"properties": {
+"order_id": "3j2h3j4gh-2323b2b3",
+"cart_id": "3j2h3j4gh-3472dbsjk",
+"cart_total": 3897.00,
+"items": 3,
+"other_charges": 2.00,
+"discount": 50.00,
+"order_total": 3849.00,
+"products": [{
+"position": 1,
+"product_id": "52efg-7f",
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 1,
+"price": 1299.00,
+"value": 1299.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/6
+"generic_article_id": 12345678,
+"EAN": 4006381333931,
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+"size": "L"
+}
+
+},
+{
+"position": 2,
+"product_id": "52efg-7l",
+"sku": "SD-henleyyellowL",
+"product_name": "SuperDry Henley Full - Yellow",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 2,
+"price": 1299.00,
+"value": 2598.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/6
+"generic_article_id": 12345679,
+"EAN": 4006381333932,
+"variant_article_number": 12345678-011,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "yellow",
+"wash_type": "softner wash",
+"pack_type": "single",
+
+}
+
+}
+
+]
+
+}
+}
+
+"size": "L"
+
+Mobile Events
+These events are specific to mobile application activity
+APPLICATION INSTALLED
+This event is fired when an application is opened for the first time after installation. It is a one time event. Should be fired on
+successful sign up/ sign in along with the Sign up/ Sign in Track event (taking into consideration anonymous users we do not
+deal with)
+
+{
+
+}
+Key name
+
+"type": "track",
+"event": "Application Installed",
+"properties": {
+"application": "Jiomart",
+"version": "18.0.1",
+"build": "23",
+"platform": "iOS"
+}
+
+Data type
+
+Possible
+Values
+
+Example/
+Description
+
+properties.app varchar(100)
+lication
+
+Name of the
+platform or
+application
+whose
+application is
+installed
+
+propeties.versi varchar(50)
+on
+
+Version of the
+application
+installed
+
+properties.buil varchar(50)
+d
+
+Build number
+of the
+application
+installed
+
+properties.platf varchar(20)
+orm
+
+iOS, Android
+
+APPLICATION OPENED
+This event is fired when an application is opened or brought to the foreground after first open. It is fired along with any other
+Login Track events. (This event should be fired in all instances of application being opened/ brought to the foreground except
+for the first instance where Application Installed is fired)
+
+{
+
+}
+
+"type": "track",
+"event": "Application Opened",
+"properties": {
+"application": "Jiomart",
+"from_background": false,
+"not_running": true,
+"version": "18.0.1",
+"build": "23",
+"platform": "iOS"
+}
+
+Key name
+
+Data type
+
+Possible
+Values
+
+Example/
+Description
+
+properties.app
+varchar(100)
+lication
+
+Name of the
+platform or
+application
+whose
+application is
+installed
+
+properties.fro
+m_backgroun
+d
+
+boolean
+
+Value for when
+the application
+is opened from
+background
+
+boolean
+
+Value for when
+the application
+was not
+running on the
+background
+
+properties.not
+_running
+
+propeties.versi
+varchar(50)
+on
+
+Version of the
+application
+installed
+
+properties.buil
+varchar(50)
+d
+
+Build number
+of the
+application
+installed
+
+properties.platf
+varchar(20)
+orm
+
+iOS, Android
+
+APPLICATION BACKGROUNDED
+This event is fired when the application is moved to background from the foreground after first open
+
+{
+
+}
+
+"type": "track",
+"event": "Application Backgrounded",
+"properties": {
+"application": "Jiomart",
+"platform": "iOS"
+}
+
+Key name
+
+Data type
+
+Possible
+Values
+
+Name of the
+platform or
+application
+whose
+application is
+installed
+
+properties.app
+varchar(100)
+lication
+
+properties.platf
+varchar(20)
+orm
+
+Example/
+Description
+
+iOS, Android
+
+APPLICATION UPDATED
+This event is fired when a user updates the application and opens it for the first time after an
+
+{
+
+}
+
+"type": "track",
+"event": "Application Updated",
+"properties": {
+"application": "Jiomart"
+"previous_version": "18.1.0"
+"previous_build": "24",
+"version": "19.0.0",
+"build": "10",
+"platform": "iOS"
+}
+
+Key name
+
+Data type
+
+Possible
+Values
+
+Example/
+Description
+
+properties.app
+varchar(100)
+lication
+
+Name of the
+platform or
+application
+whose
+application is
+installed
+
+properties.pre
+vious_version
+
+varchar(50)
+
+Version of the
+application
+installed
+
+properties.pre
+vious_build
+
+varchar(50)
+
+Build number
+of the
+application
+installed
+
+propeties.versi
+varchar(50)
+on
+
+Version of the
+application
+installed
+
+properties.buil
+varchar(50)
+d
+
+Build number
+of the
+application
+installed
+
+properties.platf
+varchar(20)
+orm
+
+iOS, Android
+
+APPLICATION UNINSTALLED
+This event is fired when a user uninstalls the application
+
+{
+
+"type": "track",
+
+}
+Key name
+
+"event": "Application Uninstalled",
+"properties": {
+"application": "Jiomart",
+"platform": "iOS"
+}
+
+Data type
+
+Possible
+Values
+
+Name of the
+platform or
+application
+whose
+application is
+installed
+
+properties.app
+varchar(100)
+lication
+
+properties.platf
+varchar(20)
+orm
+
+Example/
+Description
+
+iOS, Android
+
+APPLICATION CRASHED
+This event is fired when a crash notification is fired from app. It is only meant supplant information for crashed users
+
+{
+
+}
+Key name
+
+"type": "track",
+"event": "Application Crashed",
+"properties": {
+"application": "Jiomart",
+"platform": "iOS"
+}
+
+Data type
+
+Possible
+Values
+
+Name of the
+platform or
+application
+whose
+application is
+installed
+
+properties.app
+varchar(100)
+lication
+
+properties.platf
+varchar(20)
+orm
+
+Example/
+Description
+
+iOS, Android
+
+Context data and payload
+The context data for apps and web will also vary as per the device being used. Below is an example for both the cases.
+The standard structure is as follow 1. campaign
+2. device (mobile) / useragent (web)
+3. screen (mobile) / page (web)
+4. location (mobile) / ip (web)
+5. channel: browser or mobile
+6. os
+
+Mobile
+(Comments include thread where keys of context data and research links are added)
+
+{
+
+}
+
+"campaign": {
+"name": "Ajio Big Bold Sale",
+"source": "Sale banner",
+"medium": "push notifications",
+"content": "image link"
+},
+"device": {
+"adTrackingEnabled": true,
+"advertisingId": "0EE0AC3D-F204-4807-92CE-972CD19E3462",
+"id": "9DEE4E8E-ED3D-4C2F-BCF1-9A51149C773F",
+"manufacturer": "Apple",
+"model": "iPhone14,5",
+"name": "iPhone",
+"token": "f468984aa58aef5dfbfd6943dda709454cdea1b45a1f522a89c3809d236c8810",
+"type": "ios"
+},
+"screen": {
+"width": 1125,
+"height": 2436,
+"density": 3
+},
+"location": {
+"city": "Mumbai",
+"country": "India",
+"latitude": 19.116625,
+"longitude": 72.862358
+},
+"os": {
+"name": "iOS",
+"version": "17.2"
+},
+"channel": "mobile",
+
+Web
+(Comments include thread where keys of context data and research links are added)
+
+{
+
+"campaign": {
+"name": "Ajio Big Bold Sale",
+"source": "Sale banner",
+"medium": "advertisement",
+"content": "image link"
+},
+"userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, l
+"page": {
+
+}
+
+"url": "https://www.ajio.com/s",
+"title": "Ajio Big Bold Sale - 50_to_90 percent sale",
+"path": "50-to-90-percent-off-5399-78471",
+"referrer": "https://www.google.com/",
+"search": "?utm_source=google"
+},
+"ip": "115.117.121.194",
+"os": {
+"name": "Windows",
+"version": "11"
+},
+"channel": "browser",
+
+Complete Track Call
+Behaviour Events
+A complete example of a Track Call (behaviour) with context data and properties
+
+{
+
+"writeKey": "859f596fec469fae9a5644877d8a5840e53afbaa415833d402a67f2f5ff29f9d",
+"messageId": "ajs-next-8a1f5afd38d23123d171bc94777e88b6",
+"request_id": "68443ea7-41bb-4cf9-bc6c-7467afbce5b6",
+"sent_at": "2024-04-26T09:45:13.695Z",
+"external_ids": [
+{
+"type": "rr_id",
+"id": "802e83d0-27bc-4d68-b403-3da6d3fa223a"
+}
+],
+"application_ids": [
+{
+"type": "ajio_id",
+"id": "f225edcf-0fc9-4053-ba48-756813baa6fa"
+}
+],
+"context": {
+"campaign": {
+"name": "Ajio Big Bold Sale",
+"source": "Sale banner",
+"medium": "push notifications",
+"content": "image link"
+},
+"device": {
+"adTrackingEnabled": true,
+"advertisingId": "0EE0AC3D-F204-4807-92CE-972CD19E3462",
+"id": "9DEE4E8E-ED3D-4C2F-BCF1-9A51149C773F",
+"manufacturer": "Apple",
+"model": "iPhone14,5",
+"name": "iPhone",
+
+"token": "f468984aa58aef5dfbfd6943dda709454cdea1b45a1f522a89c3809d236c8810",
+"type": "ios"
+},
+"screen": {
+"width": 1125,
+"height": 2436,
+"density": 3
+},
+"location": {
+"city": "Mumbai",
+"country": "India",
+"latitude": 19.116625,
+"longitude": 72.862358
+},
+"os": {
+"name": "iOS",
+"version": "17.2"
+},
+"channel": "mobile"
+},
+"type": "track",
+"event": "Product Added",
+"properties": {
+"cart_id": "3j2h3j4gh-3472dbsjk",
+"position": 1,
+"product_id": "52efg-7f",
+"sku": "SD-henleyredL",
+"product_name": "SuperDry Henley Full - Red",
+"l1_category": "Fashion & Lifestyle",
+"l1_category_id": "16578",
+"l2_category": "Men",
+"l2_category_id": "10890",
+"l3_category": "Westernwear",
+"l3_category_id": "10189",
+"l4_category": "T-shirts",
+"l4_category_id": "97878",
+"l5_category": "Henley",
+"l5_category_id": "7896",
+"brand": "SuperDry",
+"brand_id": "90876",
+"quantity": 2,
+"price": 1299.00,
+"value": 2598.00,
+"url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/41039359
+"img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa1bca
+"generic_article_id": 12345678,
+"EAN": 4006381333931,
+"variant_article_number": 12345678-001,
+"meta": {
+"sleeve_type": "full",
+"fabric": "cotton blend",
+"pattern_type": "solid",
+"colour": "red",
+"wash_type": "softner wash",
+"pack_type": "single",
+
+}
+
+}
+
+}
+
+"size": "L"
+
+Mobile Events
+A complete example of a Track Call (mobile) with context data and properties
+
+{
+
+"writeKey": "859f596fec469fae9a5644877d8a5840e53afbaa415833d402a67f2f5ff29f9d",
+"messageId": "ajs-next-8a1f5afd38d23123d171bc94777e88b6",
+"request_id": "68443ea7-41bb-4cf9-bc6c-7467afbce5b6",
+"sent_at": "2024-04-26T09:45:13.695Z",
+"external_ids": [
+{
+"type": "rr_id",
+"id": "802e83d0-27bc-4d68-b403-3da6d3fa223a"
+}
+],
+"application_ids": [
+{
+"type": "ajio_id",
+"id": "f225edcf-0fc9-4053-ba48-756813baa6fa"
+}
+],
+"context": {
+"campaign": {
+"name": "Ajio Big Bold Sale",
+"source": "Sale banner",
+"medium": "push notifications",
+"content": "image link"
+},
+"device": {
+"adTrackingEnabled": true,
+"advertisingId": "0EE0AC3D-F204-4807-92CE-972CD19E3462",
+"id": "9DEE4E8E-ED3D-4C2F-BCF1-9A51149C773F",
+"manufacturer": "Apple",
+"model": "iPhone14,5",
+"name": "iPhone",
+"token": "f468984aa58aef5dfbfd6943dda709454cdea1b45a1f522a89c3809d236c8810",
+"type": "ios"
+},
+"screen": {
+"width": 1125,
+"height": 2436,
+"density": 3
+},
+"location": {
+"city": "Mumbai",
+"country": "India",
+"latitude": 19.116625,
+"longitude": 72.862358
+
+}
+
+},
+"os": {
+"name": "iOS",
+"version": "17.2"
+},
+"channel": "mobile"
+},
+"type": "track",
+"event": "Application Opened",
+"properties": {
+"application": "Jiomart",
+"from_background": false,
+"not_running": true,
+"version": "18.0.1",
+"build": "23",
+"platform": "iOS"
+}
+
+CONTEXT
+FIELD
+1
+
+app.name
+
+2
+
+app.version
+
+3
+
+app.build
+
+4
+
+campaign.nam
+e
+
+5
+6
+7
+8
+
+✅
+campaign.sour ✅
+ce
+campaign.med ✅
+ium
+campaign.term ✅
+campaign.cont ✅
+ent
+
+9
+
+device.type
+
+10
+
+device.id
+
+11
+
+device.advertis
+ingId
+
+12
+
+device.adTrac
+kingEnabled
+
+13
+
+device.manufa
+cturer
+
+14
+
+device.model
+
+15
+
+device.name
+
+16
+
+library.name
+
+17
+
+library.version
+
+18
+
+ip*
+
+19
+
+locale
+
+20
+
+network.blueto
+oth
+
+21
+
+✅
+✅
+✅
+✅
+
+network.carrier
+
+22
+
+network.cellula
+r
+
+23
+
+network.wifi
+
+24
+
+os.name
+
+25
+
+os.version
+
+26
+
+page.path
+
+27
+
+page.referrer
+
+28
+
+page.search
+
+29
+
+page.title
+
+30
+
+page.url
+
+31
+
+ANALYTICS.JS
+
+✅
+✅
+✅
+✅
+✅
+
+ANALYTICS-IOS
+
+✅
+✅
+✅
+
+✅
+✅
+✅
+
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+✅
+
+✅
+✅
+✅
+✅
+✅
+
+✅
+✅
+✅
+
+✅
+✅
+✅
+✅
+✅
+
+✅
+
+✅
+
+screen.density
+
+32
+
+screen.height
+
+33
+
+screen.width
+
+34
+
+traits
+
+35
+
+userAgent
+
+36
+
+userAgentData
+*
+
+37
+
+timezone
+
+✅
+✅
+✅
+
+ANALYTICSANDROID
+
+Phase 1 Events to be received (Jiomart BAU)
+
+Event
+Method
+
+Name
+
+Triggered by
+Jiomart Web
+App
+
+Triggered by
+Jiomart
+Mobile App
+
+Track
+
+Order
+Completed
+
+Yes
+
+Yes
+
+Track
+
+Order
+Cancelled
+
+Yes
+
+Yes
+
+Track
+
+Order
+Refunded
+
+Yes
+
+Yes
+
+Track
+
+Product
+Viewed
+
+Yes
+
+Yes
+
+Track
+
+Product Added Yes
+
+Yes
+
+Track
+
+Product
+Removed
+
+Yes
+
+Yes
+
+Track
+
+Checkout
+Started
+
+Yes
+
+Yes
+
+Page
+
+Page Viewed
+
+Yes
+
+No
+
+Screen
+
+Screen
+Viewed
+
+No
+
+Yes
+
+Track
+
+Application
+Installed
+
+No
+
+Yes
+
+Track
+
+Application
+Opened
+
+No
+
+Yes
+
+Track
+
+Application
+No
+Backgrounded
+
+Yes
+
+Track
+
+Application
+Updated
+
+Yes
+
+No
+
+
