@@ -13,6 +13,7 @@ This document provides comprehensive documentation for UCP Clickstream mobile ap
 
 
 ### Application Opened
+
 **Triggered when:** The app is opened or brought to the foreground after first open. Fired with login track events.
 
 **Type:** Core Event
@@ -33,6 +34,7 @@ This document provides comprehensive documentation for UCP Clickstream mobile ap
 ```
 
 ### Application Backgrounded
+
 **Triggered when:** The app is moved to background from the foreground after first open.
 
 **Type:** Core Event
@@ -49,6 +51,7 @@ This document provides comprehensive documentation for UCP Clickstream mobile ap
 ```
 
 ### Application Updated
+
 **Triggered when:** The app is updated and opened for the first time after update.
 
 **Type:** Core Event
@@ -69,6 +72,7 @@ This document provides comprehensive documentation for UCP Clickstream mobile ap
 ```
 
 ### Application Uninstalled
+
 **Triggered when:** The app is uninstalled by the user.
 
 **Type:** Core Event
@@ -85,6 +89,7 @@ This document provides comprehensive documentation for UCP Clickstream mobile ap
 ```
 
 ### Application Crashed
+
 **Triggered when:** A crash notification is fired from the app.
 
 **Type:** Core Event
@@ -99,6 +104,84 @@ This document provides comprehensive documentation for UCP Clickstream mobile ap
     }
 }
 ``` 
+
+### Push Notification Received
+
+**Triggered when:** A push notification is received at the customer end
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event": "Push Notification Received",
+  "writeKey": "a70e4d4ad88fb90f53df0fa63250edbf161692e4b33edb9f8c1db5e0d1853007",
+    "external_ids": [
+        {
+            "type": "rr_id",
+            "id": "77d42965-2c30-4007-b7c4-fd5340163d3d"
+        }
+    ],
+    "application_ids": [
+        {
+            "type": "jiomart_id",
+            "id": "851"
+        }
+    ],
+  "properties": {
+    "campaign": {
+      "medium": "Push",
+      "source": "Vendor Name",
+      "name": "Referral Flow",
+      "content": "Your friend invited you to play a match."
+    }
+  }
+}
+```
+
+## Push Notification Tapped
+
+**Triggered when:** A push notification is tapped by the customer
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event": "Push Notification Tapped",
+  "properties": {
+    "action": "Accept",
+    "campaign": {
+      "medium": "Push",
+      "source": "Vendor Name",
+      "name": "Referral Flow",
+      "content": "Your friend invited you to play a match."
+    }
+  }
+}
+```
+
+## Push Nofitication Bounced
+
+**Triggered when:** A push notification is bounced off the by customer
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event":"Push Notification Bounced",
+  "properties": {
+    "action": "Accept",
+    "campaign": {
+      "medium": "Push",
+      "source": "Vendor Name",
+      "name": "Referral Flow",
+      "content": "Your friend invited you to play a match."
+    }
+  }
+}
+```
 
 ## Complete Track Call Examples
 
