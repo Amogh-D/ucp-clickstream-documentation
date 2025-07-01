@@ -1021,6 +1021,18 @@ A complete example of a Track Call (behaviour) with context data and properties:
       "size": "L"
     }
   },
+  "external_ids": [
+    {
+      "type": "rr_id",
+      "id": "802e83d0-27bc-4d68-b403-3da6d3fa223a"
+    }
+  ],
+  "application_ids": [
+    {
+      "type": "ajio_id",
+      "id": "f225edcf-0fc9-4053-ba48-756813baa6fa"
+    }
+  ],
   "context": {
     "campaign": {
       "name": "Summer Sale",

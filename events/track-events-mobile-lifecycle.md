@@ -139,7 +139,7 @@ This document provides comprehensive documentation for UCP Clickstream mobile ap
 }
 ```
 
-## Push Notification Tapped
+### Push Notification Tapped
 
 **Triggered when:** A push notification is tapped by the customer
 
@@ -161,7 +161,7 @@ This document provides comprehensive documentation for UCP Clickstream mobile ap
 }
 ```
 
-## Push Nofitication Bounced
+### Push Nofitication Bounced
 
 **Triggered when:** A push notification is bounced off the by customer
 
