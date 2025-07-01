@@ -37,15 +37,6 @@ Replace the following variables in the script above:
 - `WRITE_KEY`: Your UCP Clickstream write key (contact UCP team)
 - `URL`: `https://api.cctz0.de/service/application/ccp-ingest/stream/v1.0`
 
-## Configuration
-
-### Basic Configuration
-
-[Content will be added from PDF]
-
-### Advanced Configuration
-
-[Content will be added from PDF]
 
 ## API Reference
 
