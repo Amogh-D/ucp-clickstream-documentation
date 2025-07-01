@@ -59,6 +59,63 @@ This document provides comprehensive documentation for UCP Clickstream track eve
 }
 ```
 
+### Product List Viewed
+
+**Triggered when:** A user views a list of Products on any Product listing page, Search listing page, Home page and Cart pages
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event": "Product List Viewed",
+  "properties": {
+    "list_id": "plp_men_tshirts",
+    "list_name": "Men's T-Shirts",
+    "l1_category": "Fashion & Lifestyle",
+    "l1_category_id": "16578",
+    "l2_category": "Men",
+    "l2_category_id": "10890",
+    "l3_category": "Westernwear",
+    "l3_category_id": "10189",
+    "l4_category": "T-shirts",
+    "l4_category_id": "97878",
+    "brand_filter": ["SuperDry", "Nike", "Adidas"],
+    "sort_order": "price_asc",
+    "page_number": 1,
+    "products": [
+      {
+        "product_id": "52efg-7f",
+        "sku": "SD-henleyredL",
+        "product_name": "SuperDry Henley Full - Red",
+        "brand": "SuperDry",
+        "brand_id": "90876",
+        "price": 1299.00,
+        "url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/410393598_z6f",
+        "img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa1bcafa4cf41f5843b61/-1117Wx1400H-410393598-z6f-MODEL.jpg",
+        "generic_article_id": "12345678",
+        "EAN": "4006381333931",
+        "variant_article_number": "12345678-001"
+      },
+      {
+        "product_id": "62hij-8g",
+        "sku": "NK-roundneckblueM",
+        "product_name": "Nike Round Neck T-Shirt - Blue",
+        "brand": "Nike",
+        "brand_id": "90877",
+        "price": 999.00,
+        "url": "https://www.ajio.com/nike-round-neck-t-shirt/p/410393599_z6g",
+        "img_url": "https://assets.ajio.com/medias/sys_master/root/20231112/uKkY/654fa1bdafa4cf41f5843b62/-1117Wx1400H-410393599-z6g-MODEL.jpg",
+        "generic_article_id": "12345679",
+        "EAN": "4006381333932",
+        "variant_article_number": "12345679-001"
+      }
+      // Additional products as needed
+    ]
+  }
+}
+```
+
 ### Product Viewed
 
 **Triggered when:** A user views a product on a page, screen or preview mode.
