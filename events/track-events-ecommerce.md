@@ -261,6 +261,106 @@ This document provides comprehensive documentation for UCP Clickstream track eve
 }
 ```
 
+### Product Added to Wishlist
+
+**Triggered when:** A product is added to the wishlist by the customer
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event": "Product Added to Wishlist",
+  "properties": {
+    "wishlist_id": "wl_001",
+    "wishlist_name": "Summer Collection",
+    "product_id": "52efg-7f",
+    "sku": "SD-henleyredL",
+    "product_name": "SuperDry Henley Full - Red",
+    "l1_category": "Fashion & Lifestyle",
+    "l1_category_id": "16578",
+    "l2_category": "Men",
+    "l2_category_id": "10890",
+    "l3_category": "Westernwear",
+    "l3_category_id": "10189",
+    "l4_category": "T-shirts",
+    "l4_category_id": "97878",
+    "l5_category": "Henley",
+    "l5_category_id": "7896",
+    "brand": "SuperDry",
+    "brand_id": "90876",
+    "quantity": 1,
+    "price": 1299.00,
+    "value": 1299.00,
+    "position": 3,
+    "url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/410393598_z6f",
+    "img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa1bcafa4cf41f5843b61/-1117Wx1400H-410393598-z6f-MODEL.jpg",
+    "generic_article_id": "12345678",
+    "EAN": "4006381333931",
+    "variant_article_number": "12345678-001",
+    "meta": {
+      "sleeve_type": "full",
+      "fabric": "cotton blend",
+      "pattern_type": "solid",
+      "colour": "red",
+      "wash_type": "softner wash",
+      "pack_type": "single",
+      "size": "L"
+    }
+  }
+}
+```
+
+### Product Removed from Wishlist
+
+**Triggered wehn:** A product is removed from the wishlist by the customer
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event": "Product Removed from Wishlist",
+  "properties": {
+    "wishlist_id": "wl_001",
+    "wishlist_name": "Summer Collection",
+    "product_id": "52efg-7f",
+    "sku": "SD-henleyredL",
+    "product_name": "SuperDry Henley Full - Red",
+    "l1_category": "Fashion & Lifestyle",
+    "l1_category_id": "16578",
+    "l2_category": "Men",
+    "l2_category_id": "10890",
+    "l3_category": "Westernwear",
+    "l3_category_id": "10189",
+    "l4_category": "T-shirts",
+    "l4_category_id": "97878",
+    "l5_category": "Henley",
+    "l5_category_id": "7896",
+    "brand": "SuperDry",
+    "brand_id": "90876",
+    "quantity": 1,
+    "price": 1299.00,
+    "value": 1299.00,
+    "position": 3,
+    "url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/410393598_z6f",
+    "img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa1bcafa4cf41f5843b61/-1117Wx1400H-410393598-z6f-MODEL.jpg",
+    "generic_article_id": "12345678",
+    "EAN": "4006381333931",
+    "variant_article_number": "12345678-001",
+    "meta": {
+      "sleeve_type": "full",
+      "fabric": "cotton blend",
+      "pattern_type": "solid",
+      "colour": "red",
+      "wash_type": "softner wash",
+      "pack_type": "single",
+      "size": "L"
+    }
+  }
+}
+```
+
 ### Order Completed
 
 **Triggered when:** An order is completed by the user.
@@ -681,6 +781,94 @@ This document provides comprehensive documentation for UCP Clickstream track eve
 }
 ```
 
+### User Logged In
+
+**Triggered when:** User logs in on a website
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event": "User Logged In",
+  "properties": {
+    "mobile_number": "9876543210",
+    "login_method": "otp",
+    "login_status": "success",
+    "timestamp": "2025-05-12T09:05:47Z",
+    "device_type": "mobile",
+    "platform": "iOS",
+    "app_version": "5.2.1",
+    "ip": "203.0.113.42",
+    "location": {
+      "city": "Mumbai",
+      "region": "Maharashtra",
+      "country": "India"
+    },
+    "session_id": "G7kPz9QxLm4N1aVbYcT3HwE8JsKdRuX2"
+  }
+}
+```
+
+**Info:** The key device_type would be web, in the scenarios of web login. The corresponding platform can include browser name value support, while the app_version key in non mandatory
+
+
+## Session Started
+
+**Triggered when:** User starts a session on app launch, website. Useful in tracking session length
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event": "Session Started",
+  "properties": {
+    "session_id": "G7kPz9QxLm4N1aVbYcT3HwE8JsKdRuX2",
+    "mobile_number": "9876543210",
+    "timestamp": "2025-05-12T09:05:47Z",
+    "referrer": "https://www.google.com",
+    "utm_source": "google",
+    "utm_medium": "cpc",
+    "utm_campaign": "summer_sale",
+    "device_type": "mobile",
+    "platform": "iOS",
+    "app_version": "5.2.1",
+    "ip": "203.0.113.42",
+    "location": {
+      "city": "Mumbai",
+      "region": "Maharashtra",
+      "country": "India"
+    }
+  }
+}
+```
+
+**Info:** The key device_type would be web, in the scenarios of web login. The corresponding platform can include browser name value support, while the app_version key in non mandatory
+
+## Session Ended
+
+**Triggered when:** User closes website or app
+
+**Type:** Core Event
+
+```json
+{
+  "type": "track",
+  "event": "Session Ended",
+  "properties": {
+    "session_id": "G7kPz9QxLm4N1aVbYcT3HwE8JsKdRuX2",
+    "mobile_number": "9876543210",
+    "timestamp": "2025-05-12T09:35:47Z",
+    "duration": 1800,
+    "pages_viewed": 5,
+    "events_triggered": 12,
+    "conversion": true
+  }
+}
+```
+
+**Info:** The key duration represents session length in seconds. The keys of pages_viewed, events_triggered & conversion are non mandatory keys which could be sent if the platforms have enough intelligence to capture these keys and maintain the same.
 
 ## Context Data and Payload
 
