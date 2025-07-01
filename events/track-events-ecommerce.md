@@ -2,7 +2,7 @@
 id: track-events-ecommerce
 title: Track Events - Ecommerce
 sidebar_label: Track Events - Ecommerce
-description: Comprehensive documentation for UCP Clickstream track events including ecommerce and mobile application events
+description: Comprehensive documentation for UCP Clickstream track events commonly followed in ecommerce
 ---
 
 # Track Events - Ecommerce
