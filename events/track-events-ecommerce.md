@@ -1,13 +1,13 @@
 ---
-id: track-events-phase-1
-title: Track Events - Phase 1 Integration
-sidebar_label: Track Events Phase 1
+id: track-events-ecommerce
+title: Track Events - Ecommerce
+sidebar_label: Track Events - Ecommerce
 description: Comprehensive documentation for UCP Clickstream track events including ecommerce and mobile application events
 ---
 
-# Track Events - Phase 1 Integration
+# Track Events - Ecommerce
 
-This document provides comprehensive documentation for UCP Clickstream track events, including both ecommerce and mobile application events. These events are generic activity events - clickstream and orderstream and not dependent on medium.
+This document provides comprehensive documentation for UCP Clickstream track events of generic ecommerce activity tracking. The payloads for all events are followed by the context data variations in web & mobile along with a complete event payload call
 
 ## Ecommerce Events
 
@@ -624,78 +624,6 @@ This document provides comprehensive documentation for UCP Clickstream track eve
 }
 ```
 
-## Mobile Events
-
-These events are specific to mobile application activity.
-
-### Application Installed
-
-**Triggered when:** An application is opened for the first time after installation. It is a one time event. Should be fired on first open.
-
-**Type:** Core Event
-
-| Key name | Data type | Possible Values | Example/Description |
-|----------|-----------|-----------------|-------------------|
-| app_name | String | - | Name of the application |
-| app_version | String | - | Version of the application |
-| build_number | String | - | Build number of the application |
-
-### Application Opened
-
-**Triggered when:** An application is opened or brought to the foreground after first open. It is fired along with any other Login Track events. (This event should be fired in all instances of application being opened/ brought to the foreground except first open).
-
-**Type:** Core Event
-
-| Key name | Data type | Possible Values | Example/Description |
-|----------|-----------|-----------------|-------------------|
-| app_name | String | - | Name of the application |
-| app_state | String | "foreground", "background" | Value for when app is in foreground, Value for when app is in background |
-| app_version | String | - | Version of the application |
-| build_number | String | - | Build number of the application |
-
-### Application Backgrounded
-
-**Triggered when:** The application is moved to background from the foreground after first open.
-
-**Type:** Core Event
-
-| Key name | Data type | Possible Values | Example/Description |
-|----------|-----------|-----------------|-------------------|
-| app_name | String | - | Name of the application |
-
-### Application Updated
-
-**Triggered when:** A user updates the application and opens it for the first time after an update.
-
-**Type:** Core Event
-
-| Key name | Data type | Possible Values | Example/Description |
-|----------|-----------|-----------------|-------------------|
-| app_name | String | - | Name of the application |
-| app_version | String | - | Version of the application |
-| build_number | String | - | Build number of the application |
-| previous_app_version | String | - | Version of the previous application |
-| previous_build_number | String | - | Build number of the previous application |
-
-### Application Uninstalled
-
-**Triggered when:** A user uninstalls the application.
-
-**Type:** Core Event
-
-| Key name | Data type | Possible Values | Example/Description |
-|----------|-----------|-----------------|-------------------|
-| app_name | String | - | Name of the application |
-
-### Application Crashed
-
-**Triggered when:** A crash notification is fired from app. It is only meant supplant information for crashed users.
-
-**Type:** Core Event
-
-| Key name | Data type | Possible Values | Example/Description |
-|----------|-----------|-----------------|-------------------|
-| app_name | String | - | Name of the application |
 
 ## Context Data and Payload
 
@@ -889,131 +817,6 @@ A complete example of a Track Call (behaviour) with context data and properties:
 }
 ```
 
-### Mobile Events
-
-A complete example of a Track Call (mobile) with context data and properties:
-
-```json
-{
-  "type": "track",
-  "event": "Application Opened",
-  "properties": {
-    "app_name": "Jiomart",
-    "app_state": "foreground",
-    "app_version": "4.2.1",
-    "build_number": "421"
-  },
-  "context": {
-    "campaign": {
-      "name": "App Launch",
-      "source": "app_store",
-      "medium": "organic"
-    },
-    "device": {
-      "type": "mobile",
-      "manufacturer": "Apple",
-      "model": "iPhone 13",
-      "id": "device_id_123"
-    },
-    "library": {
-      "name": "analytics-ios",
-      "version": "4.0.0"
-    },
-    "locale": "en-US",
-    "network": {
-      "wifi": false,
-      "carrier": "Verizon"
-    },
-    "os": {
-      "name": "iOS",
-      "version": "15.0"
-    },
-    "screen": {
-      "width": 390,
-      "height": 844,
-      "density": 3
-    },
-    "timezone": "America/New_York",
-    "traits": {
-      "email": "user@example.com",
-      "name": "John Doe"
-    }
-  }
-}
-```
-
-## SDK Implementation
-
-### Analytics.js (Web)
-
-```javascript
-// Initialize analytics
-analytics.identify('user_123', {
-  email: 'user@example.com',
-  name: 'John Doe'
-});
-
-// Track product clicked
-analytics.track('Product Clicked', {
-  click_source: 'Category List',
-  product_id: '52efg-7f',
-  sku: 'SD-henleyredL',
-  product_name: 'SuperDry Henley Full - Red',
-  // ... other properties
-});
-```
-
-### Analytics-iOS
-
-```swift
-// Initialize analytics
-Analytics.shared().identify("user_123", traits: [
-    "email": "user@example.com",
-    "name": "John Doe"
-])
-
-// Track application opened
-Analytics.shared().track("Application Opened", properties: [
-    "app_name": "Jiomart",
-    "app_state": "foreground",
-    "app_version": "4.2.1",
-    "build_number": "421"
-])
-```
-
-### Analytics-Android
-
-```java
-// Initialize analytics
-Analytics.with(context).identify("user_123", new Traits()
-    .putEmail("user@example.com")
-    .putName("John Doe"), null);
-
-// Track application opened
-Analytics.with(context).track("Application Opened", new Properties()
-    .putValue("app_name", "Jiomart")
-    .putValue("app_state", "foreground")
-    .putValue("app_version", "4.2.1")
-    .putValue("build_number", "421"));
-```
-
-## Phase 1 Events Summary
-
-| Method | Name | Triggered by Jiomart Web | Triggered by Jiomart Mobile App |
-|--------|------|-------------------------|--------------------------------|
-| Track | Order Completed | Yes | Yes |
-| Track | Order Cancelled | Yes | Yes |
-| Track | Order Refunded | Yes | Yes |
-| Track | Product Viewed | Yes | Yes |
-| Track | Product Added | Yes | Yes |
-| Track | Product Removed | Yes | Yes |
-| Track | Checkout Started | Yes | Yes |
-| Page | Page Viewed | Yes | No |
-| Screen | Screen Viewed | No | Yes |
-| Track | Application Installed | No | Yes |
-| Track | Application Opened | No | Yes |
-| Track | Application Backgrounded | No | Yes |
-| Track | Application Updated | Yes | No |
 
 ## Field Descriptions
 
@@ -1047,12 +850,3 @@ Analytics.with(context).track("Application Opened", new Properties()
 - **cancellation_reason**: Reason for order cancellation
 - **refund_amount**: Amount refunded
 - **refund_payment_breakup**: Refund payment method breakdown
-
-### Mobile App Fields
-
-- **app_name**: Application name
-- **app_version**: Application version
-- **build_number**: Build number
-- **app_state**: Application state (foreground/background)
-- **previous_app_version**: Previous application version
-- **previous_build_number**: Previous build number
