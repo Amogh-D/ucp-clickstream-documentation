@@ -1139,6 +1139,32 @@ A complete example of a Track call (ecommerce) with context data and properties
 }
 ```
 
+## Support for additional keys
+
+### Additional External IDs support
+
+UCP SDK can also support additional keys for identification in the external_ids key, to maintain more identifiers. These keys are added below -
+
+
+```json
+{
+  "external_ids": [
+    {
+      "type": "rr_id",
+      "id": "802e83d0-27bc-4d68-b403-3da6d3fa223a"
+    },
+    {
+      "type": "h_rr_id",                        // Hashed RRID
+      "id": "A3CBE1E52784C7C284504EEA472D3F3B44762FD539ED4792F2A58FA687C33145"
+    },
+    {
+      "type": "jiomart_appsflyer_id",           // Appsflyer ID of JioMart Apps
+      "id": "1742368657196-3583543"
+    }
+  ]
+}
+```
+
 ## Field Descriptions
 
 ### Common Product Fields
