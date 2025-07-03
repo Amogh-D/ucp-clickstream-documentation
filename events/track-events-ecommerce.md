@@ -892,44 +892,26 @@ The standard structure is as follows:
 
 ```json
 {
-  "context": {
-    "campaign": {
-      "name": "Summer Sale",
-      "source": "email",
-      "medium": "newsletter"
-    },
-    "device": {
-      "type": "desktop",
-      "manufacturer": "Apple",
-      "model": "MacBook Pro"
-    },
-    "library": {
-      "name": "analytics.js",
-      "version": "2.0.0"
-    },
-    "locale": "en-US",
-    "network": {
-      "wifi": true,
-      "carrier": "AT&T"
-    },
-    "os": {
-      "name": "macOS",
-      "version": "12.0"
-    },
-    "page": {
-      "path": "/products/123",
-      "referrer": "https://google.com",
-      "search": "red shirt",
-      "title": "Product Page",
-      "url": "https://example.com/products/123"
-    },
-    "timezone": "America/New_York",
-    "traits": {
-      "email": "user@example.com",
-      "name": "John Doe"
-    },
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-  }
+  "campaign": {
+    "name": "Ajio Big Bold Sale",
+    "source": "Sale banner",
+    "medium": "advertisement",
+    "content": "image link"
+  },
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "page": {
+    "url": "https://www.ajio.com/s",
+    "title": "Ajio Big Bold Sale - 50_to_90 percent sale",
+    "path": "50-to-90-percent-off-5399-78471",
+    "referrer": "https://www.google.com/",
+    "search": "?utm_source=google"
+  },
+  "ip": "115.117.121.194",
+  "os": {
+    "name": "Windows",
+    "version": "11"
+  },
+  "channel": "browser",
 }
 ```
 
@@ -937,42 +919,38 @@ The standard structure is as follows:
 
 ```json
 {
-  "context": {
-    "campaign": {
-      "name": "App Launch",
-      "source": "app_store",
-      "medium": "organic"
-    },
-    "device": {
-      "type": "mobile",
-      "manufacturer": "Apple",
-      "model": "iPhone 13",
-      "id": "device_id_123"
-    },
-    "library": {
-      "name": "analytics-ios",
-      "version": "4.0.0"
-    },
-    "locale": "en-US",
-    "network": {
-      "wifi": false,
-      "carrier": "Verizon"
-    },
-    "os": {
-      "name": "iOS",
-      "version": "15.0"
-    },
-    "screen": {
-      "width": 390,
-      "height": 844,
-      "density": 3
-    },
-    "timezone": "America/New_York",
-    "traits": {
-      "email": "user@example.com",
-      "name": "John Doe"
-    }
-  }
+  "campaign": {
+    "name": "Ajio Big Bold Sale",
+    "source": "Sale banner",
+    "medium": "push notifications",
+    "content": "image link"
+  },
+  "device": {
+    "adTrackingEnabled": true,
+    "advertisingId": "0EE0AC3D-F204-4807-92CE-972CD19E3462",
+    "id": "9DEE4E8E-ED3D-4C2F-BCF1-9A51149C773F",
+    "manufacturer": "Apple",
+    "model": "iPhone14,5",
+    "name": "iPhone",
+    "token": "f468984aa58aef5dfbfd6943dda709454cdea1b45a1f522a89c3809d236c8810",
+    "type": "ios"
+  },
+  "screen": {
+    "width": 1125,
+    "height": 2436,
+    "density": 3
+  },
+  "location": {
+    "city": "Mumbai",
+    "country": "India",
+    "latitude": 19.116625,
+    "longitude": 72.862358
+  },
+  "os": {
+    "name": "iOS",
+    "version": "17.2"
+  },
+  "channel": "mobile",
 }
 ```
 
@@ -984,10 +962,61 @@ A complete example of a Track Call (behaviour) with context data and properties:
 
 ```json
 {
+  "writeKey": "859f596fec469fae9a5644877d8a5840e53afbaa415833d402a67f2f5ff29f9d",
+  "messageId": "ajs-next-8a1f5afd38d23123d171bc94777e88b6",
+  "request_id": "68443ea7-41bb-4cf9-bc6c-7467afbce5b6",
+  "sent_at": "2024-04-26T09:45:13.695Z",
+  "external_ids": [
+    {
+      "type": "rr_id",
+      "id": "802e83d0-27bc-4d68-b403-3da6d3fa223a"
+    }
+  ],
+  "application_ids": [
+    {
+      "type": "ajio_id",
+      "id": "f225edcf-0fc9-4053-ba48-756813baa6fa"
+    }
+  ],
+  "context": {
+    "campaign": {
+      "name": "Ajio Big Bold Sale",
+      "source": "Sale banner",
+      "medium": "push notifications",
+      "content": "image link"
+    },
+    "device": {
+      "adTrackingEnabled": true,
+      "advertisingId": "0EE0AC3D-F204-4807-92CE-972CD19E3462",
+      "id": "9DEE4E8E-ED3D-4C2F-BCF1-9A51149C773F",
+      "manufacturer": "Apple",
+      "model": "iPhone14,5",
+      "name": "iPhone",
+      "token": "f468984aa58aef5dfbfd6943dda709454cdea1b45a1f522a89c3809d236c8810",
+      "type": "ios"
+    },
+    "screen": {
+      "width": 1125,
+      "height": 2436,
+      "density": 3
+    },
+    "location": {
+      "city": "Mumbai",
+      "country": "India",
+      "latitude": 19.116625,
+      "longitude": 72.862358
+    },
+    "os": {
+      "name": "iOS",
+      "version": "17.2"
+    },
+    "channel": "mobile"
+  },
   "type": "track",
-  "event": "Product Clicked",
+  "event": "Product Added",
   "properties": {
-    "click_source": "Category List",
+    "cart_id": "3j2h3j4gh-3472dbsjk",
+    "position": 1,
     "product_id": "52efg-7f",
     "sku": "SD-henleyredL",
     "product_name": "SuperDry Henley Full - Red",
@@ -1003,14 +1032,14 @@ A complete example of a Track Call (behaviour) with context data and properties:
     "l5_category_id": "7896",
     "brand": "SuperDry",
     "brand_id": "90876",
-    "quantity": 1,
+    "quantity": 2,
     "price": 1299.00,
-    "value": 1299.00,
-    "url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/4103",
-    "img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa",
-    "generic_article_id": "12345678",
-    "EAN": "4006381333931",
-    "variant_article_number": "12345678-001",
+    "value": 2598.00,
+    "url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/410393598_z6f",
+    "img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa1bcafa4cf41f5843b61/-1117Wx1400H-410393598-z6f-MODEL.jpg",
+    "generic_article_id": 12345678,
+    "EAN": 4006381333931,
+    "variant_article_number": 12345678-001,
     "meta": {
       "sleeve_type": "full",
       "fabric": "cotton blend",
@@ -1020,56 +1049,6 @@ A complete example of a Track Call (behaviour) with context data and properties:
       "pack_type": "single",
       "size": "L"
     }
-  },
-  "external_ids": [
-    {
-      "type": "rr_id",
-      "id": "802e83d0-27bc-4d68-b403-3da6d3fa223a"
-    }
-  ],
-  "application_ids": [
-    {
-      "type": "ajio_id",
-      "id": "f225edcf-0fc9-4053-ba48-756813baa6fa"
-    }
-  ],
-  "context": {
-    "campaign": {
-      "name": "Summer Sale",
-      "source": "email",
-      "medium": "newsletter"
-    },
-    "device": {
-      "type": "desktop",
-      "manufacturer": "Apple",
-      "model": "MacBook Pro"
-    },
-    "library": {
-      "name": "analytics.js",
-      "version": "2.0.0"
-    },
-    "locale": "en-US",
-    "network": {
-      "wifi": true,
-      "carrier": "AT&T"
-    },
-    "os": {
-      "name": "macOS",
-      "version": "12.0"
-    },
-    "page": {
-      "path": "/products/123",
-      "referrer": "https://google.com",
-      "search": "red shirt",
-      "title": "Product Page",
-      "url": "https://example.com/products/123"
-    },
-    "timezone": "America/New_York",
-    "traits": {
-      "email": "user@example.com",
-      "name": "John Doe"
-    },
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
   }
 }
 ```
