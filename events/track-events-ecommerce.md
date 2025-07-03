@@ -813,7 +813,7 @@ This document provides comprehensive documentation for UCP Clickstream track eve
 **Info:** The key device_type would be web, in the scenarios of web login. The corresponding platform can include browser name value support, while the app_version key in non mandatory
 
 
-## Session Started
+### Session Started
 
 **Triggered when:** User starts a session on app launch, website. Useful in tracking session length
 
@@ -846,7 +846,7 @@ This document provides comprehensive documentation for UCP Clickstream track eve
 
 **Info:** The key device_type would be web, in the scenarios of web login. The corresponding platform can include browser name value support, while the app_version key in non mandatory
 
-## Session Ended
+### Session Ended
 
 **Triggered when:** User closes website or app
 
