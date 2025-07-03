@@ -956,9 +956,9 @@ The standard structure is as follows:
 
 ## Complete Track Call Examples
 
-### Behaviour Events (Web)
+### Ecommerce Events (Mobile)
 
-A complete example of a Track Call (behaviour) with context data and properties:
+A complete example of a Track Call (ecommerce) with context data and properties:
 
 ```json
 {
@@ -1053,6 +1053,91 @@ A complete example of a Track Call (behaviour) with context data and properties:
 }
 ```
 
+### Ecommerce Events (Web)
+
+A complete example of a Track call (ecommerce) with context data and properties
+
+```json
+{
+  "writeKey": "859f596fec469fae9a5644877d8a5840e53afbaa415833d402a67f2f5ff29f9d",
+  "messageId": "ajs-next-8a1f5afd38d23123d171bc94777e88b6",
+  "request_id": "68443ea7-41bb-4cf9-bc6c-7467afbce5b6",
+  "sent_at": "2024-04-26T09:45:13.695Z",
+  "external_ids": [
+    {
+      "type": "rr_id",
+      "id": "802e83d0-27bc-4d68-b403-3da6d3fa223a"
+    }
+  ],
+  "application_ids": [
+    {
+      "type": "ajio_id",
+      "id": "f225edcf-0fc9-4053-ba48-756813baa6fa"
+    }
+  ],
+  "context": {
+    "campaign": {
+      "name": "Ajio Big Bold Sale",
+      "source": "Sale banner",
+      "medium": "advertisement",
+      "content": "image link"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "page": {
+      "url": "https://www.ajio.com/s",
+      "title": "Ajio Big Bold Sale - 50_to_90 percent sale",
+      "path": "50-to-90-percent-off-5399-78471",
+      "referrer": "https://www.google.com/",
+      "search": "?utm_source=google"
+    },
+    "ip": "115.117.121.194",
+    "os": {
+      "name": "Windows",
+      "version": "11"
+    },
+    "channel": "browser",
+    
+  },
+  "type": "track",
+  "event": "Product Added",
+  "properties": {
+    "cart_id": "3j2h3j4gh-3472dbsjk",
+    "position": 1,
+    "product_id": "52efg-7f",
+    "sku": "SD-henleyredL",
+    "product_name": "SuperDry Henley Full - Red",
+    "l1_category": "Fashion & Lifestyle",
+    "l1_category_id": "16578",
+    "l2_category": "Men",
+    "l2_category_id": "10890",
+    "l3_category": "Westernwear",
+    "l3_category_id": "10189",
+    "l4_category": "T-shirts",
+    "l4_category_id": "97878",
+    "l5_category": "Henley",
+    "l5_category_id": "7896",
+    "brand": "SuperDry",
+    "brand_id": "90876",
+    "quantity": 2,
+    "price": 1299.00,
+    "value": 2598.00,
+    "url": "https://www.ajio.com/superdry-waffle-long-sleeve-henley-t-shirt/p/410393598_z6f",
+    "img_url": "https://assets.ajio.com/medias/sys_master/root/20231111/tJjY/654fa1bcafa4cf41f5843b61/-1117Wx1400H-410393598-z6f-MODEL.jpg",
+    "generic_article_id": 12345678,
+    "EAN": 4006381333931,
+    "variant_article_number": 12345678-001,
+    "meta": {
+      "sleeve_type": "full",
+      "fabric": "cotton blend",
+      "pattern_type": "solid",
+      "colour": "red",
+      "wash_type": "softner wash",
+      "pack_type": "single",
+      "size": "L"
+    }
+  }
+}
+```
 
 ## Field Descriptions
 
